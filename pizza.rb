@@ -2,8 +2,8 @@ module Pizza
   class Pie
     attr_accessor :toppings
 
-    def initialize toppings
-      @toppings = toppings 
+    def initialize(toppings = [Topping.new("cheese", vegetarian: true)])
+      @toppings = toppings
     end
   end
 
@@ -17,7 +17,7 @@ module Pizza
 
     #
     # Returns a new Topping object.
-    def initialize name, vegetarian: false
+    def initialize(name, vegetarian: false)
       @name = name
       @vegetarian = vegetarian
     end
